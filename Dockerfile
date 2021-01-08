@@ -9,7 +9,8 @@ RUN yum groupinstall "Development tools" -y
 
 RUN wget https://www.imagemagick.org/download/ImageMagick.tar.gz
 RUN tar -zxvf ImageMagick.tar.gz
-WORKDIR `find -name "ImageMagick*" -type d 2>/dev/null`
+RUN mv ImageMagick-* ImageMagick
+WORKDIR ImageMagick
 RUN ./configure
 RUN make && make install
 
