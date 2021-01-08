@@ -26,4 +26,4 @@ RUN echo 'sed  -i  "s/MyAwesomeStickerBot/`echo $USERNAME`/gi" config.js' >> sta
 RUN echo 'npm start' >> start.sh
 RUN chmod +x start.sh
 
-CMD ls -alh
+CMD ./start.sh
